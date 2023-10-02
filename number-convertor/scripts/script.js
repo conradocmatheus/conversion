@@ -6,16 +6,15 @@ document.getElementById("inputSubmit").onclick = function () {
         temp = document.getElementById("inputField").value
         temp = Number(temp)
         temp = toCelsius(temp)
-        document.getElementById("resultLabel").innerHTML = temp + "C"
+        document.getElementById("resultLabel").innerHTML = parseFloat(temp).toFixed(2) + "C"
     }
     if (document.getElementById("fBtn").selected) {
         temp = document.getElementById("inputField").value
         temp = Number(temp)
         temp = toFarenheit(temp)
-        document.getElementById("resultLabel").innerHTML = temp + "F"
+        document.getElementById("resultLabel").innerHTML = parseFloat(temp).toFixed(2) + "F"
     }
 }
-
 
 function toFarenheit(temp) {
     return (temp * (9 / 5) + 32)
